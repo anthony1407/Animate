@@ -1,0 +1,17 @@
+// Zoom In
+@mixin zoomIn($time) {
+  animation: zoomIn $time;
+  @keyframes zoomIn {
+    from {
+      transform: scale3d(0, 0, 0);
+    }
+  }
+}
+@mixin zoomOut($time) {
+  animation: zoomOut $time;
+  @keyframes zoomOut {
+    to {
+      transform: scale3d(0, 0, 0);
+    }
+  }
+}

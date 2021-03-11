@@ -1,0 +1,59 @@
+@if $style == true {
+  $time: 1s;
+  // Fade
+
+  .fadein,
+  .fade-in {
+    @include FadeIn($time);
+  }
+
+  .fadeout,
+  .fade-out {
+    @include FadeOut(($time));
+  }
+
+  // Slide
+
+  .slideleft,
+  .slide-left {
+    @include slideLeft($time);
+  }
+  .slideright,
+  .slide-right {
+    @include slideRight($time);
+  }
+  .slidetop,
+  .slide-top {
+    @include slideTop($time);
+  }
+  .slidebottom,
+  .slide-bottom {
+    @include slideBottom($time);
+  }
+  .slidedown,
+  .slide-down {
+    @include slideDown($time);
+  }
+  .slideup,
+  .slide-up {
+    @include slideUp($time, 1000px);
+  }
+
+  // Zoom
+  .zoomin,
+  .zoom-in {
+    @include zoomIn($time);
+  }
+  .zoomout,
+  .zoomout {
+    @include zoomOut($time);
+  }
+
+  //Border
+  .animatedborders,
+  .animated-borders {
+    @include animatedBorders(0.5s);
+  }
+} @else {
+  @warn "Para traer las animaciones debes cambiar el valor $style a true";
+}
